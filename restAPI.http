@@ -3,3 +3,5 @@ GET http://localhost:8000/aliens
 # GET http://localhost:8000/aliens/6337e6088469fa1a8d91bb7a
 
 # DELETE http://localhost:8000/aliens/6337e5438469fa1a8d91bb73
+
+# newman run postman_tests.postman_collection.json
