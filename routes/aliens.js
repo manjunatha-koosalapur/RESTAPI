@@ -33,7 +33,7 @@ router.post('/', async(req,res) => {
         const a1 =  await alien.save() 
         res.json(a1)
     }catch(err){
-        res.send('Error - Body missing')
+        res.send('Error - incorrect JSON body')
     }
 })
 
@@ -46,7 +46,7 @@ router.patch('/:id',async(req,res)=> {
         const a1 = await alien.save()
         res.json(a1)   
     }catch(err){
-        res.send('Error')
+        res.send('Error - incorrect JSON body')
     }
 
 })
@@ -58,7 +58,7 @@ router.delete('/:id',async(req,res)=> {
         const a1 = await alien.remove()
         res.json(a1)   
     }catch(err){
-        res.send('Error')
+        res.send('Error - provide correct ID')
     }
 
 })
