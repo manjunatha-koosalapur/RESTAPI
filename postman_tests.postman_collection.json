@@ -8,12 +8,25 @@
 	"item": [
 		{
 			"name": "Create Aliens",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Kevin Peter\",\r\n    \"tech\": \"Cypress JavaScript\" \r\n}",
+					"raw": "{\r\n    \"name\": \"Kevin Peter3\",\r\n    \"tech\": \"Cypress JavaScript\" \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,6 +49,19 @@
 		},
 		{
 			"name": "GET all Aliens",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -55,6 +81,19 @@
 		},
 		{
 			"name": "GET a Alien",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -81,12 +120,25 @@
 		},
 		{
 			"name": "Update a Alien",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PATCH",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n            \"sub\": false,\r\n            \"name\": \"Nora Korina2\",\r\n            \"tech\": \"Cypress v10\" \r\n    }",
+					"raw": "    {\r\n            \"sub\": false,\r\n            \"name\": \"Nora Korina\",\r\n            \"tech\": \"Cypress v10\" \r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -107,7 +159,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": "63370b6fcecbf6aa49d37e34"
+							"value": "63374cf5ac8ad45f0203bebe"
 						}
 					]
 				}
@@ -116,11 +168,33 @@
 		},
 		{
 			"name": "Delete a Alien",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "http://localhost:8000/aliens/:id",
+					"raw": "http://localhost:8000/aliens/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -128,13 +202,7 @@
 					"port": "8000",
 					"path": [
 						"aliens",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "63374e14ac8ad45f0203bec6"
-						}
+						""
 					]
 				}
 			},
