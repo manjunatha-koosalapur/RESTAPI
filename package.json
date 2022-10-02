@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "jest"
-
+    "pm-test": "newman run postman_tests.postman_collection.json",
+    "cy-test": "npx cypress run"
   },
   "keywords": [],
   "author": "Manjunatha Koosalapur",
   "license": "ISC",
   "dependencies": {
+    "cypress": "^10.9.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "mongodb": "^4.10.0",
